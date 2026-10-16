@@ -1,0 +1,6 @@
+node_modules
+dist
+bundle.zip
+.DS_Store
+.claude/
+.playwright-cli/

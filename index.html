@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <title>Playables Shooter</title>
+    <!--
+      Playables 集成规则 §1：SDK 必须在任何游戏代码之前加载，且不能覆盖 window.ytgame。
+      不在 Playables 环境时这个脚本会 404，platform 层会回退到本地实现。
+    -->
+    <script src="https://www.youtube.com/game_api/v1"></script>
+    <style>
+      html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
+      /* 设计规则：不填满视口时必须居中 pillarbox / letterbox，黑底让黑边自然。 */
+      #game { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+      canvas { display: block; }
+    </style>
+  </head>
+  <body>
+    <div id="game"></div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
